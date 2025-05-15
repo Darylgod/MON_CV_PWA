@@ -1,0 +1,354 @@
+@import url('../node_modules/@mdi/font/css/materialdesignicons.min.css');
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background-color: #121212; /* Fond sombre pour l'effet néon */
+    color: #f0f0f0; /* Couleur de texte claire */
+    line-height: 1.6;
+    padding: 20px;
+}
+
+header {
+    background-color: #1e1e1e;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    position: sticky; /* Rendre le header sticky */
+    top: 0;
+    z-index: 100; /* Assurer qu'il reste au-dessus du contenu */
+    display: flex; /* Ajouter un flex container pour aligner le titre et le toggle */
+    justify-content: space-between; /* Espacer le titre et le toggle */
+    align-items: center; /* Les aligner verticalement au centre */
+    padding-left: 20px; /* Ajouter un peu de marge à gauche */
+    padding-right: 20px; /* Ajouter un peu de marge à droite */
+}
+
+header h1 {
+    margin: 0; /* Supprimer la marge par défaut du h1 */
+}
+
+.nav-toggle {
+    display: none; /* Masqué par défaut sur les grands écrans */
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.5em;
+    padding: 10px;
+    z-index: 101; /* Au-dessus du menu */
+}
+
+nav {
+    width: 100%; /* Le nav prend toute la largeur sur les petits écrans */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0; /* Supprimer la marge du haut et ajouter en bas si nécessaire */
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav a {
+    color: #00bcd4; /* Couleur néon cyan */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #00ffff; /* Couleur néon cyan clair au survol */
+    text-shadow: 0 0 10px #00ffff; /* Effet néon au survol */
+}
+
+main {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+section {
+    margin-bottom: 40px;
+    padding: 20px;
+    border-bottom: 1px solid #333;
+}
+
+section:last-child {
+    border-bottom: none;
+}
+
+h1, h2, h3 {
+    color: #00bcd4; /* Couleur néon cyan pour les titres */
+    text-shadow: 0 0 5px #00bcd4; /* Léger effet néon pour les titres */
+}
+
+h2 {
+    border-bottom: 2px solid #00bcd4;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.experience-item {
+    margin-bottom: 20px;
+    padding: 15px;
+    border-left: 3px solid #00bcd4;
+    background-color: #252525;
+    border-radius: 4px;
+}
+
+.experience-item h3 {
+    margin-top: 0;
+}
+
+.entreprise {
+    font-style: italic;
+    color: #ccc;
+    margin-bottom: 5px;
+}
+
+.competences-section ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.competences-section ul li {
+    background-color: #333;
+    color: #00bcd4;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    box-shadow: 0 0 5px #00bcd4; /* Effet néon pour les compétences */
+}
+
+audio, video {
+    display: block;
+    margin-top: 15px;
+    max-width: 100%;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    margin-top: 30px;
+    color: #777;
+}
+
+/* Style pour la section d'accueil cliquable */
+#accueil {
+    text-align: center;
+    padding: 50px 20px;
+    cursor: pointer; /* Indique que c'est cliquable */
+}
+
+#accueil img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    box-shadow: 0 0 10px #00bcd4; /* Effet néon pour la photo */
+}
+
+#accueil h1 {
+    margin-bottom: 5px;
+}
+
+/* Styles pour la section Partage */
+#partage .share-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+    justify-content: center;
+    flex-wrap: wrap; /* Permettre aux boutons de passer à la ligne sur les petits écrans */
+}
+
+#partage .share-buttons a,
+#partage .share-buttons button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    font-size: 1em;
+    margin-bottom: 10px; /* Ajouter un peu de marge en bas pour les écrans plus petits */
+}
+
+#partage .share-buttons a:hover,
+#partage .share-buttons button:hover {
+    opacity: 0.8;
+}
+
+#partage .share-buttons a.whatsapp {
+    background-color: #25D366;
+}
+
+#partage .share-buttons a.facebook {
+    background-color: #1877F2;
+}
+
+#partage .share-buttons a.email {
+    background-color: #EA4335;
+}
+
+#partage .share-buttons button {
+    background-color: #64b5f6; /* Bleu clair */
+}
+
+#partage .share-buttons i {
+    font-size: 1.2em;
+}
+
+/* Styles pour la bannière d'installation */
+#install-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+    z-index: 1000;
+    display: none; /* Masquée par défaut */
+    justify-content: center; /* Aligner les éléments horizontalement */
+    align-items: center; /* Aligner les éléments verticalement */
+    gap: 20px; /* Espacement entre le texte et les boutons */
+}
+
+#install-banner p {
+    margin: 0;
+}
+
+#install-button-banner,
+#dismiss-button-banner {
+    background-color: #00bcd4;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+#install-button-banner:hover {
+    background-color: #00ffff;
+}
+
+#dismiss-button-banner {
+    background-color: transparent;
+    color: #ccc;
+    border: 1px solid #ccc;
+}
+
+#dismiss-button-banner:hover {
+    color: #fff;
+    border-color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        justify-content: space-between; /* Assurer que le titre et le toggle sont bien séparés */
+    }
+
+    nav {
+        position: absolute; /* Positionner le menu absolument */
+        top: 60px; /* Sous le header */
+        left: 0;
+        background-color: #1e1e1e;
+        width: 100%;
+        z-index: 99; /* Sous le toggle mais au-dessus du reste */
+        display: none; /* Masquer initialement sur les petits écrans */
+    }
+
+    nav.open {
+        display: block; /* Afficher lorsque la classe 'open' est présente */
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding: 20px 0;
+        margin: 0; /* Supprimer les marges sur les petits écrans */
+    }
+
+    .nav-toggle {
+        display: block; /* Afficher sur les petits écrans */
+    }
+
+    main {
+        padding: 15px;
+        margin-top: 60px; /* Espacer le main sous le header sticky */
+    }
+
+    section {
+        padding: 15px;
+        margin-bottom: 30px;
+    }
+
+    .competences-section ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #partage .share-buttons {
+        flex-direction: column; /* Empiler les boutons de partage sur les petits écrans */
+        align-items: stretch; /* Étirer les boutons pour prendre toute la largeur */
+    }
+
+    #partage .share-buttons a,
+    #partage .share-buttons button {
+        width: auto; /* Les boutons prennent toute la largeur */
+        margin-bottom: 10px;
+        align-items: center;
+        justify-content: center; /* Centrer le texte et l'icône */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8em;
+    }
+
+    h2 {
+        font-size: 1.4em;
+    }
+
+    nav a {
+        font-size: 1em;
+    }
+
+    main {
+        padding: 10px;
+        margin-top: 60px; /* Assurer l'espacement même sur les très petits écrans */
+    }
+
+    section {
+        padding: 10px;
+        margin-bottom: 25px;
+    }
+}
